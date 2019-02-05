@@ -32,13 +32,14 @@ class Navbar extends Component {
     );
   }
 }
+
 // buttonConteiner to nsz komponent
 // szukamy buttona
 
 const NavWrapper = styled.nav`
-  background: var(--mianBlue);
+  background: var(--mainBlue);
   .nav-link {
-    color: var(--mianWhite) !important;
+    color: var(--mainWhite) !important;
     font-size: 1.3rem !important;
     // 1rem 16px
     text-transform: capitalize !important;
