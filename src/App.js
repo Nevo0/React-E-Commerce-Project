@@ -12,7 +12,6 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        {/* co to jest */}
         <Navbar />
         <Switch>
           {/* musimy dodac exact zeby aplikacja dzialala poprawnie*/}
