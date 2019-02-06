@@ -11,7 +11,10 @@ class ProductProvider extends Component {
     detailProduct: detailProduct,
     cart: [],
     modalOpen: false,
-    modalProdact: detailProduct
+    modalProdact: detailProduct,
+    cartSubTotal: 0,
+    cartTax: 0,
+    cartTotal: 0
   };
 
   componentDidMount() {
@@ -94,6 +97,19 @@ class ProductProvider extends Component {
     });
   };
 
+  increment = id => {
+    console.log("increment");
+  };
+  decrement = id => {
+    console.log("decrement");
+  };
+  removeItem = id => {
+    console.log("removeItem");
+  };
+  clearCart = id => {
+    console.log("clearCart");
+  };
+
   render() {
     return (
       <ProductContext.Provider
@@ -102,7 +118,11 @@ class ProductProvider extends Component {
           handleDetail: this.handleDetail,
           addToCart: this.addToCart,
           openModal: this.openModal,
-          closeModal: this.closeModal
+          closeModal: this.closeModal,
+          increment: this.increment,
+          decrement: this.decrement,
+          removeItem: this.removeItem,
+          clearCart: this.clearCart
         }}
       >
         {/* test Button */}
