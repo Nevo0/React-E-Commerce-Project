@@ -63,13 +63,13 @@ class Details extends Component {
 
                     <ButtonContainer
                       cart
-                      disabled={inCart}
                       onClick={() => {
                         value.addToCart(id);
                       }}
                       className="btn  float-right"
+                      disabled={inCart}
                     >
-                      {inCart ? "inCart" : "Add to cart"}
+                      {inCart ? "in Cart" : "Add to cart"}
                     </ButtonContainer>
                   </div>
                 </div>
