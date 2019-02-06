@@ -28,6 +28,7 @@ class Product extends Component {
                   disabled={inCart}
                   onClick={() => {
                     value.addToCart(id);
+                    value.openModal(id);
                     // console.log(value);
                   }}
                 >

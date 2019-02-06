@@ -65,6 +65,7 @@ class Details extends Component {
                       cart
                       onClick={() => {
                         value.addToCart(id);
+                        value.openModal(id);
                       }}
                       className="btn  float-right"
                       disabled={inCart}
