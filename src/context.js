@@ -24,11 +24,25 @@ class ProductProvider extends Component {
     });
   };
 
-  handleDetail = () => {
-    console.log("handleDetail");
+  getItem = id => {
+    const product = this.state.products.find(item => item.id === id);
+    // const product2 = this.state.products[id];
+    // console.log(product);
+    // console.log(product2);
+    return product;
   };
-  addToCart = () => {
-    console.log("addToCart");
+
+  handleDetail = id => {
+    // console.log("handleDetail");
+    const product = this.getItem(id);
+    console.log(product);
+    this.setState({
+      detailProduct: product
+    });
+  };
+  addToCart = id => {
+    // console.log("addToCart: " + id);
+    this.getItem(id);
   };
 
   test = () => {
@@ -57,7 +71,7 @@ class ProductProvider extends Component {
         }}
       >
         {/* test Button */}
-        {/* <button onClick={this.test}>me</button> */}
+        <button onClick={this.getItem}>me</button>
         {this.props.children}
       </ProductContext.Provider>
     );
