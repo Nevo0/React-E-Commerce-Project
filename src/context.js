@@ -9,7 +9,7 @@ class ProductProvider extends Component {
   state = {
     products: [],
     detailProduct: detailProduct,
-    cart: storeProducts,
+    cart: [],
     modalOpen: false,
     modalProdact: detailProduct,
     cartSubTotal: 0,
@@ -136,3 +136,5 @@ class ProductProvider extends Component {
 const ProductConsumer = ProductContext.Consumer;
 
 export { ProductProvider, ProductConsumer };
+
+// 4+56+55
